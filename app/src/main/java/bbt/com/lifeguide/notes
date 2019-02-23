@@ -1,0 +1,10 @@
+
+You need to look at the YouTube Data API. You will find there documentation about how the API can be accessed. You can also find client libraries.
+
+You could also make the requests yourself. Here is an example URL that retrieves the latest videos from a channel:
+
+https://www.googleapis.com/youtube/v3/search?key={your_key_here}&channelId={channel_id_here}&part=snippet,id&order=date&maxResults=20
+
+After that you will receive a JSON with video ids and details, and you can construct your video URL like this:
+
+http://www.youtube.com/watch?v={video_id_here}

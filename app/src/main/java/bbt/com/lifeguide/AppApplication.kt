@@ -2,6 +2,7 @@ package bbt.com.lifeguide
 
 import android.app.Application
 import bbt.com.lifeguide.helper.AppConstants
+import com.facebook.drawee.backends.pipeline.Fresco
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -18,6 +19,8 @@ class AppApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         initRetrofit()
+        Fresco.initialize(this)
+
     }
 
     private fun initRetrofit() {
